@@ -7,14 +7,13 @@ This package uses functions from `graph` and `Rgraphviz` to create graph structu
 ## Installation
 The package depends on `graph` and `Rgraphviz`, these packages can be installed via `BiocManager`:
 
-   if (!requireNamespace("BiocManager", quietly = TRUE))
-     install.packages("BiocManager")
-
-   BiocManager::install("graph")
-   BiocManager::install("Rgraphviz")
+    if (!requireNamespace("BiocManager", quietly = TRUE))
+      install.packages("BiocManager")
+    BiocManager::install("graph")
+    BiocManager::install("Rgraphviz")
 
 
 The `mspack2` package can be installed using the `devtools` packgage:
 
-   library(devtools) 
-   devtools::install_github(repo='"samuelanyaso/mspack2") 
+    library(devtools) 
+    devtools::install_github(repo='"samuelanyaso/mspack2") 
