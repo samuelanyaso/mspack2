@@ -1,0 +1,22 @@
+Package: mspack2
+Title: Nonparametric estimation of state occupation probabilities from multistate models with current-status data
+Version: 0.0.0.9000
+Authors@R: c(
+    person("Samuel", "Anyaso-Samuel", email = "sanyasosamuel@ufl.edu", role = c("aut", "cre")),
+	person("Dipankar", "Bandyopadhyay", email = "bandyop@vcuhealth.org", role = "aut"),
+	person("Somnath", "Datta", email = "somnath.datta@ufl.edu", role = "aut")
+	)
+Description: Utilizes theory on nonparametric regression to estimate the counting process and at-risk sets for current status data from general multistate models. The counting process and at-risk sets are necessary functionals for estimating the state occupation probabilities..
+License: GPL-2
+Encoding: UTF-8
+Imports: Rdpack (>= 0.7), KernSmooth, Rgraphviz, graph, isotone, stats
+RdMacros: Rdpack
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+Depends: 
+    R (>= 2.10)
+LazyData: true
+Suggests: 
+    rmarkdown,
+    knitr
+VignetteBuilder: knitr
