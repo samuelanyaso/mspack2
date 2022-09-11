@@ -4,10 +4,8 @@ This repository contains code for computing the state occupation probabilities (
 
 In addition, this repository contains the a real-world current-status data set from a study where the periodontal disease health of Gullah-speaking African-Americans diabetics (GAAD) was examined at a given inspection time [[1]](#1). Incidence of periodontal disease was determined by measuring the clinical attachment level at six sites of each tooth, excluding molars, in the subjects' mouth. The dataset comprise both clinical and demographic information for 288 subjects that participated in the study. 
 
-This package uses functions from `graph` and `Rgraphviz` to create graph structure represented in terms of nodes and an edge list for the multistate model.
-
 ## Installation
-The package depends on `graph` and `Rgraphviz`, these packages can be installed via `BiocManager`:
+This package uses functions from `graph` and `Rgraphviz` to create graph structure represented in terms of nodes and an edge list for the multistate model. These packages can be installed via `BiocManager`:
 
     if (!requireNamespace("BiocManager", quietly = TRUE))
       install.packages("BiocManager")
