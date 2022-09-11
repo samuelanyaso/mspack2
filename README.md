@@ -24,4 +24,4 @@ The `mspack2` package can be installed using the `devtools` packgage:
 <a id="1">[1]</a> 
 Fernandes JK, Wiegand RE, Salinas CF, Grossi SG, Sanders JJ, Lopes-Virella MF, Slate EH (2009). 
 Periodontal disease status in Gullah African Americans with type 2 diabetes living in South Carolina. 
-Journal of periodontology, 80(7), 1062–1068.
+*Journal of periodontology*, **80**(7), 1062–1068.
