@@ -18,6 +18,8 @@ The `mspack2` package can be installed using the `devtools` packgage:
     library(devtools) 
     devtools::install_github(repo='"samuelanyaso/mspack2") 
 
+The vignette for this package is avaiable [here](https://github.com/samuelanyaso/mspack2/blob/master/mspack2_vig2.html).
+
 ## References
 <a id="1">[1]</a> 
 Fernandes JK, Wiegand RE, Salinas CF, Grossi SG, Sanders JJ, Lopes-Virella MF, Slate EH (2009). 
