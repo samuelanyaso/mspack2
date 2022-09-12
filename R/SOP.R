@@ -17,7 +17,7 @@
 ##' @param Zval a numeric value indicating the value of the covariate at which the conditional estimator is evaluated at. Default is NULL where the conditional estimator is evaluated at the first quartile of the single covariate.
 ##' @param cutoffs a numeric vector specifying the time points at which the estimates are returned. Default is NULL, which returns the SOPs at all inspection time points.
 ##' @return a data frame of state occupation probabilities of each state in the multistate model.
-##' @author Samuel Anyaso-Samuel, Dipankar Bandyopadhyay, Somnath.Datta
+##' @author Samuel Anyaso-Samuel, Dipankar Bandyopadhyay, Somnath Datta
 ##' @import graph
 ##' @import Rgraphviz
 ##' @import isotone
