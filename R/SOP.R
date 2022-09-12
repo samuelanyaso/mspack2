@@ -57,7 +57,8 @@
 ##' SOP(data.type='cluster-correlated',dat=cdat, tree=tree, start.probs=start.probs,
 ##'     ngrid=1000, weight='none', pavY=TRUE, cond='none', Zval=NULL,
 ##'     cutoffs = seq(from=min(cdat$time), to=max(cdat$time), length.out=10))
-SOP <- function(data.type, dat, tree, start.probs, weight = "none", bw = NULL, ngrid = 1000, pavY = TRUE, cond = "none", Zval = NULL, cutoffs = NULL) {
+SOP <- function(data.type, dat, tree, start.probs, weight = "none", bw = NULL, ngrid = 1000, pavY = TRUE, cond = "none",
+    Zval = NULL, cutoffs = NULL) {
 
     # figure out the data type
     arg0 <- c("uncorrelated", "cluster-correlated")
@@ -87,9 +88,11 @@ SOP <- function(data.type, dat, tree, start.probs, weight = "none", bw = NULL, n
         cond <- NULL
 
     if (data.type == "uncorrelated") {
-        res <- curr_stat_unclust(dat = dat, tree = tree, start.probs = start.probs, bw = bw, ngrid = ngrid, pavY = pavY, cond = cond, Zval = Zval)
+        res <- curr_stat_unclust(dat = dat, tree = tree, start.probs = start.probs, bw = bw, ngrid = ngrid, pavY = pavY,
+            cond = cond, Zval = Zval)
     } else if (data.type == "cluster-correlated") {
-        res <- curr_stat(dat = dat, tree = tree, start.probs = start.probs, weight = weight, bw = bw, ngrid = ngrid, pavY = pavY, cond = cond, Zval = Zval)
+        res <- curr_stat(dat = dat, tree = tree, start.probs = start.probs, weight = weight, bw = bw, ngrid = ngrid, pavY = pavY,
+            cond = cond, Zval = Zval)
     }
 
     # get the estimates at specific time points

@@ -89,5 +89,5 @@ SOP(data.type='cluster-correlated',dat=cdat, tree=tree, start.probs=start.probs,
 }
 }
 \author{
-Samuel Anyaso-Samuel, Dipankar Bandyopadhyay, Somnath.Datta
+Samuel Anyaso-Samuel, Dipankar Bandyopadhyay, Somnath Datta
 }

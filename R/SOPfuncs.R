@@ -1,4 +1,5 @@
-##################################################################### estimates of occupation probabilities at specific time points
+##################################################################### estimates of occupation probabilities at specific
+##################################################################### time points
 getProbs <- function(fit, cutoffs) {
 
     # time grid
@@ -12,7 +13,8 @@ getProbs <- function(fit, cutoffs) {
 }
 
 
-##################################################################### Estimate state occupation probability for unclustered data
+##################################################################### Estimate state occupation probability for
+##################################################################### unclustered data
 curr_stat_unclust <- function(dat, tree, start.probs, bw = NULL, ngrid = NULL, pavY = TRUE, cond = NULL, Zval = NULL) {
 
     colnames(dat)[which(colnames(dat) == "stage")] <- "state"
@@ -74,7 +76,8 @@ curr_stat_unclust <- function(dat, tree, start.probs, bw = NULL, ngrid = NULL, p
     # possible transitions
     nt.states <- which(sapply(edgeL(tree), function(x) length(x$edges) > 0))  # gets the indices for the non-absorbing state
     lng <- sapply(edges(tree)[nodes(tree) %in% names(nt.states)], length)  # gets the no. of outgoing edges for each non-absorbing state
-    trans <- paste(rep(nodes(tree)[nodes(tree) %in% names(nt.states)], lng), unlist(edges(tree)[nodes(tree) %in% names(nt.states)]), sep = "")  # names the possible transitions
+    trans <- paste(rep(nodes(tree)[nodes(tree) %in% names(nt.states)], lng), unlist(edges(tree)[nodes(tree) %in% names(nt.states)]),
+        sep = "")  # names the possible transitions
 
     ## Indicators I(Ujj' <= C) -- this is the indicator that the j to j' transition has taken place by time C.
     Is <- matrix(0, nrow = length(cstimes), ncol = length(trans))
@@ -152,8 +155,8 @@ curr_stat_unclust <- function(dat, tree, start.probs, bw = NULL, ngrid = NULL, p
     # adjust the at risk set
     Ys <- Ys[-1, ]
 
-    # assign column names to dNs replicates the non-absorbing states by the number of edges out of each state gets the edges proceding out of
-    # each non-absorbing state
+    # assign column names to dNs replicates the non-absorbing states by the number of edges out of each state gets the
+    # edges proceding out of each non-absorbing state
     ds <- paste("dN", rep(nodes(tree)[nodes(tree) %in% names(nt.states)], lng), unlist(edges(tree)[nodes(tree) %in% names(nt.states)]))
     colnames(dNs) <- ds
 
@@ -173,7 +176,8 @@ curr_stat_unclust <- function(dat, tree, start.probs, bw = NULL, ngrid = NULL, p
     colnames(ps) <- paste("p", nodes(tree), sep = "")
 
     # creates an array to store teh matrices of the estimates at each event time
-    all.dA <- all.I_dA <- all.ajs <- array(dim = c(nstate, nstate, nrow(dNs)), dimnames = list(rows = nodes(tree), cols = nodes(tree), dim = rownames(dNs)))
+    all.dA <- all.I_dA <- all.ajs <- array(dim = c(nstate, nstate, nrow(dNs)), dimnames = list(rows = nodes(tree), cols = nodes(tree),
+        dim = rownames(dNs)))
 
     for (i in 1:nrow(dNs)) {
         I_dA <- diag(nstate)
@@ -219,7 +223,8 @@ curr_stat_unclust <- function(dat, tree, start.probs, bw = NULL, ngrid = NULL, p
 }
 
 
-##################################################################### Estimate state occupation probability for cluster-correlated data
+##################################################################### Estimate state occupation probability for
+##################################################################### cluster-correlated data
 curr_stat <- function(dat, tree, start.probs, weight = "ICS", bw = NULL, ngrid = NULL, pavY = TRUE, cond = NULL, Zval = NULL) {
 
     colnames(dat)[which(colnames(dat) == "stage")] <- "state"
@@ -306,7 +311,8 @@ curr_stat <- function(dat, tree, start.probs, weight = "ICS", bw = NULL, ngrid =
     # possible transitions
     nt.states <- which(sapply(edgeL(tree), function(x) length(x$edges) > 0))  # gets the indices for the non-absorbing state
     lng <- sapply(edges(tree)[nodes(tree) %in% names(nt.states)], length)  # gets the no. of outgoing edges for each non-absorbing state
-    trans <- paste(rep(nodes(tree)[nodes(tree) %in% names(nt.states)], lng), unlist(edges(tree)[nodes(tree) %in% names(nt.states)]), sep = "")  # names the possible transitions
+    trans <- paste(rep(nodes(tree)[nodes(tree) %in% names(nt.states)], lng), unlist(edges(tree)[nodes(tree) %in% names(nt.states)]),
+        sep = "")  # names the possible transitions
 
     ## Indicators I(Ujj' <= C) -- this is the indicator that the j to j' transition has taken place by time C.
     Is <- matrix(0, nrow = length(cstimes), ncol = length(trans))
@@ -384,8 +390,8 @@ curr_stat <- function(dat, tree, start.probs, weight = "ICS", bw = NULL, ngrid =
     # adjust the at risk set
     Ys <- Ys[-1, ]
 
-    # assign column names to dNs replicates the non-absorbing states by the number of edges out of each state gets the edges proceding out of
-    # each non-absorbing state
+    # assign column names to dNs replicates the non-absorbing states by the number of edges out of each state gets the
+    # edges proceding out of each non-absorbing state
     ds <- paste("dN", rep(nodes(tree)[nodes(tree) %in% names(nt.states)], lng), unlist(edges(tree)[nodes(tree) %in% names(nt.states)]))
     colnames(dNs) <- ds
 
@@ -405,7 +411,8 @@ curr_stat <- function(dat, tree, start.probs, weight = "ICS", bw = NULL, ngrid =
     colnames(ps) <- paste("p", nodes(tree), sep = "")
 
     # creates an array to store teh matrices of the estimates at each event time
-    all.dA <- all.I_dA <- all.ajs <- array(dim = c(nstate, nstate, nrow(dNs)), dimnames = list(rows = nodes(tree), cols = nodes(tree), dim = rownames(dNs)))
+    all.dA <- all.I_dA <- all.ajs <- array(dim = c(nstate, nstate, nrow(dNs)), dimnames = list(rows = nodes(tree), cols = nodes(tree),
+        dim = rownames(dNs)))
 
     for (i in 1:nrow(dNs)) {
         I_dA <- diag(nstate)

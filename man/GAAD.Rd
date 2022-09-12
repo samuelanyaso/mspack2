@@ -15,7 +15,7 @@ A data frame with 32735 rows and 9 variables:
 \item{Hba1c}{Glycemic Level, 0: uncontrolled, 1: high glycemic level}
 \item{Maxilla}{0: tooth-site in lower jaw, 1: tooth-site in upper jaw}
 \item{CSTime}{The current status (inspection) time of the (adult) tooth, in years.}
-\item{state}{State as defined by clinical attachment level (CAL), occupied when inspected. States 1, 2, 3 and 4 correspond to 'Healthy', 'Mild', 'Moderate' and 'Severe' level of periodontal disease. State 4 is the absorbing state}
+\item{state}{State occupied when inspected. The states are defined by clinical attachment level (CAL); states 1, 2, 3, and 4 correspond to 'Healthy' (CAL = 0), 'Mild' (CAL = {1, 2}), 'Moderate' (CAL = {3, 4}), and 'Severe' (CAL >= 5) level of periodontal disease. State 4 is the absorbing state.}
 ...
 }
 }
