@@ -15,7 +15,7 @@ A data frame with 32735 rows and 9 variables:
 \item{Hba1c}{Glycemic Level, 0: uncontrolled, 1: high glycemic level}
 \item{Maxilla}{0: tooth-site in lower jaw, 1: tooth-site in upper jaw}
 \item{CSTime}{The current status (inspection) time of the (adult) tooth, in years.}
-\item{state}{State occupied when inspected. States 1, 2, 3 and 4 correspond to 'No', 'Mild', 'Moderate' and 'Severe' level of periodontal disease. State 4 is the absorbing state}
+\item{state}{State as defined by clinical attachment level (CAL), occupied when inspected. States 1, 2, 3 and 4 correspond to 'Healthy', 'Mild', 'Moderate' and 'Severe' level of periodontal disease. State 4 is the absorbing state}
 ...
 }
 }
@@ -24,8 +24,10 @@ GAAD
 }
 \description{
 Data from the cross-sectional study of 288 Gullah-speaking African-American diabetics (GAAD) where their
-periodontal disease (PD) status was evaluated at a given inspection time. The data contains the current status times,
-states that describe severity of PD, and clinical/demographic information.
+periodontal disease (PD) status was evaluated at a given inspection time. Incidence of periodontal disease
+was determined by measuring the clinical attachment level at six sites of each tooth, excluding molars,
+in the subjects' mouth. The data contains the current status times, states that describe severity of PD,
+and clinical/demographic information.
 }
 \references{
 {

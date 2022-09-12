@@ -152,8 +152,8 @@ curr_stat_unclust <- function(dat, tree, start.probs, bw = NULL, ngrid = NULL, p
     # adjust the at risk set
     Ys <- Ys[-1, ]
 
-    # assign column names to dNs replicates the non-absorbing states by the number of edges out of each state gets the edges proceding
-    # out of each non-absorbing state
+    # assign column names to dNs replicates the non-absorbing states by the number of edges out of each state gets the edges proceding out of
+    # each non-absorbing state
     ds <- paste("dN", rep(nodes(tree)[nodes(tree) %in% names(nt.states)], lng), unlist(edges(tree)[nodes(tree) %in% names(nt.states)]))
     colnames(dNs) <- ds
 
@@ -384,8 +384,8 @@ curr_stat <- function(dat, tree, start.probs, weight = "ICS", bw = NULL, ngrid =
     # adjust the at risk set
     Ys <- Ys[-1, ]
 
-    # assign column names to dNs replicates the non-absorbing states by the number of edges out of each state gets the edges proceding
-    # out of each non-absorbing state
+    # assign column names to dNs replicates the non-absorbing states by the number of edges out of each state gets the edges proceding out of
+    # each non-absorbing state
     ds <- paste("dN", rep(nodes(tree)[nodes(tree) %in% names(nt.states)], lng), unlist(edges(tree)[nodes(tree) %in% names(nt.states)]))
     colnames(dNs) <- ds
 

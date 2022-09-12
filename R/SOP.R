@@ -89,8 +89,7 @@ SOP <- function(data.type, dat, tree, start.probs, weight = "none", bw = NULL, n
     if (data.type == "uncorrelated") {
         res <- curr_stat_unclust(dat = dat, tree = tree, start.probs = start.probs, bw = bw, ngrid = ngrid, pavY = pavY, cond = cond, Zval = Zval)
     } else if (data.type == "cluster-correlated") {
-        res <- curr_stat(dat = dat, tree = tree, start.probs = start.probs, weight = weight, bw = bw, ngrid = ngrid, pavY = pavY, cond = cond,
-            Zval = Zval)
+        res <- curr_stat(dat = dat, tree = tree, start.probs = start.probs, weight = weight, bw = bw, ngrid = ngrid, pavY = pavY, cond = cond, Zval = Zval)
     }
 
     # get the estimates at specific time points
